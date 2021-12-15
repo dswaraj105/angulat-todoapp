@@ -1,0 +1,40 @@
+<div class="container" ng-init="addTask">
+  <form novalidate class="form" name="addTask" ng-submit="addTaskHandler(newtask)">
+    <!-- {{newtask}} -->
+    <input
+      type="text"
+      name="task"
+      class="inputs"
+      placeholder="Add Task"
+      ng-model="newtask.name"
+      ng-required="true"
+    />
+    <input
+      type="date"
+      name="deadline"
+      class="inputs"
+      onload="getDate()" 
+      ng-model="newtask.deadline"
+      ng-required="true"
+    />
+    <div ng-hide="editMode">
+      <button type="submit" class="submitBtn" ng-disabled="addTask.$invalid" >Add</button>
+    </div>
+    <div ng-show="editMode">
+      <button type="submit" class="submitBtn" ng-disabled="addTask.$invalid" >Update</button>
+      <button class="submitBtn" >Cancel</button>
+    </div>
+  </form>
+
+  <div class="display-tasks">
+    <ul>
+      <li ng-repeat="task in tasks" class="task-li" >
+        {{task.name}} - {{task.deadline}}  
+        <span class="delete" >
+          <i ng-click="editTask(task)" class="far fa-edit"></i> &nbsp;
+          <i ng-click="deleteTask(task)" class="fas fa-trash"></i>
+        </span> 
+      </li>
+    </ul>
+  </div>
+</div>

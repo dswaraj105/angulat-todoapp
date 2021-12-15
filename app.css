@@ -1,0 +1,69 @@
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid red;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.nav-ul {
+  display: flex;
+}
+
+/* nav links */
+.nav-li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+
+/* add Items Page  */
+/* items container  */
+.container {
+  border: 1px solid rgb(236, 227, 227);
+  background-color: rgb(190, 183, 171);
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* form  */
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs {
+  width: 200px;
+  margin: 5px;
+}
+
+.submitBtn {
+  background-color: aqua;
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+}
+
+button[disabled="disabled"]{
+  opacity: 0.3;
+  color: brown;
+}
+
+
+/* displaying tasks section  */
+.task-li {
+  padding: 0 10px;
+  list-style: none;
+}
+
+.delete{
+  float: right;
+  
+}
+
